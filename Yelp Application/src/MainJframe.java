@@ -64,7 +64,7 @@ public class MainJframe extends JFrame {
 			private String[] days = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15",
 					"16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" };
 			private String[] equalitySigns = { "=", "<", ">" };
-			private String[] andOr = {"AND", "OR"};
+			private String[] andOr = { "AND", "OR" };
 			private JTextField hourFromCheckinTextField;
 			private JTextField hourToCheckinTextField;
 			private JTextField valueCheckinTextField;
@@ -76,7 +76,7 @@ public class MainJframe extends JFrame {
 			private JDatePickerImpl toReviewDatePicker;
 			private JDatePanelImpl memberSinceUsersDatePanel;
 			private JDatePickerImpl memberSinceUsersDatePicker;
-			
+
 			public void run() {
 				try {
 					initializeComponents();
@@ -138,26 +138,27 @@ public class MainJframe extends JFrame {
 				equalityNumOfFrndsUsersComboBox = new JComboBox<>(equalitySigns);
 				equalityAvgStarsUsersComboBox = new JComboBox<>(equalitySigns);
 				andOrUsersComboBox = new JComboBox<>(andOr);
-				
+
 				// text fields
 				hourFromCheckinTextField = new JTextField("hour");
 				hourToCheckinTextField = new JTextField("hour");
 				valueCheckinTextField = new JTextField();
 				valueStarReviewTextField = new JTextField();
 				valueVotesReviewTextField = new JTextField();
-				
+
 				// date picker
 				UtilDateModel model = new UtilDateModel();
-				//model.setDate(20,04,2014);
+				// model.setDate(20,04,2014);
 				// Need this...
 				Properties p = new Properties();
 				p.put("text.today", "Today");
 				p.put("text.month", "Month");
 				p.put("text.year", "Year");
-				
+
 				JDatePanelImpl datePanel = new JDatePanelImpl(model, p);
 				// Don't know about the formatter, but there it is...
-//				JDatePickerImpl datePicker = new JDatePickerImpl(datePanel, new DateLabelFormatter());
+				// JDatePickerImpl datePicker = new JDatePickerImpl(datePanel, new
+				// DateLabelFormatter());
 
 				fromReviewDatePanel = new JDatePanelImpl(model, p);
 				fromReviewDatePicker = new JDatePickerImpl(fromReviewDatePanel, null);
@@ -165,14 +166,14 @@ public class MainJframe extends JFrame {
 				toReviewDatePicker = new JDatePickerImpl(toReviewDatePanel, null);
 				memberSinceUsersDatePanel = new JDatePanelImpl(model, p);
 				memberSinceUsersDatePicker = new JDatePickerImpl(memberSinceUsersDatePanel, null);
-				
+
 				// add all panels to frame
 				mainFrame.add(businessPanel);
-//				mainFrame.add(usersPanel);
-//				mainFrame.add(queryPanel);
-//				mainFrame.add(executeQueryButton);
-//				mainFrame.add(resultPanel);
-				
+				// mainFrame.add(usersPanel);
+				// mainFrame.add(queryPanel);
+				// mainFrame.add(executeQueryButton);
+				// mainFrame.add(resultPanel);
+
 				// add all panels/components to business panel
 				businessPanel.add(businessLabel);
 				businessPanel.add(categoryPanel);
@@ -189,13 +190,13 @@ public class MainJframe extends JFrame {
 				subCategoryPanel.add(checkinLabel);
 				// add all components to review panel
 				subCategoryPanel.add(reviewLabel);
-				
+
 				// add all components to users panel
 				usersPanel.add(usersLabel);
-				
+
 				// add all components to query panel
-//				queryPanel.add();
-				
+				// queryPanel.add();
+
 				// add all components to result panel
 				resultPanel.add(resultLabel);
 
